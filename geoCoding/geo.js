@@ -1,8 +1,9 @@
 const request = require("request");
 const getWeather = require("../getWeather/getWeather");
+require('dotenv').config()
 
 const getGeo = (address, callback) => {
-  const URL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=pk.eyJ1Ijoic3lhbXBoaWxpcCIsImEiOiJja3ZodjVsZm8wMG1iMnduMWE5Ym0wd3U5In0.F1iVR8ExKS9ABMqXLuMmJA&limit=1`;
+  const URL = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${process.env.GEOMAP_API}&limit=1`;
   request({ url: URL, json: true }, (error, response) => {
 
     if (error) {

@@ -1,8 +1,9 @@
 const request = require("request");
+require('dotenv').config()
 
 const getWeather = (data, callback) => {
   let URL =
-    `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.long}&appid=9deba395bfcb5cc8cd468d3325ac665b`;
+    `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.long}&appid=${process.env.OPEN_API}`;
 
   request({ url: URL, json: true }, (error, response, body) => {
     if (error) {

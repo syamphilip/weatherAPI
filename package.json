@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/syamphilip/weatherAPI#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "request": "^2.88.2"
   }
 }
