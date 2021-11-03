@@ -16,7 +16,7 @@ const WeatherSchema = new Schema({
 const WeatherData = mongoose.model("LocationHistory", WeatherSchema);
 
 const connectionURL =
-  "mongodb+srv://syamphilip96:syamphilip96@cluster0.oeec8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://syamphilip96:syamphilip96@cluster0.oeec8.mongodb.net/WeatherLocationHistory?retryWrites=true&w=majority";
 
 mongoose.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
   console.log("Connected to DB");
